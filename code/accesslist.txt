@@ -1,0 +1,196 @@
+Sandbox.Engine/Sandbox.BaseFileSystem
+Sandbox.Engine/Sandbox.BaseFileSystem.FindFile( System.String, System.String, System.Boolean )
+Sandbox.Engine/Sandbox.SurroundingBoundsType
+Sandbox.Game/Sandbox.AnimEntity..ctor()
+Sandbox.Game/Sandbox.Camera
+Sandbox.Game/Sandbox.ClientInput
+Sandbox.Game/Sandbox.ClientInput.Pressed( Sandbox.InputButton )
+Sandbox.Game/Sandbox.CollisionGroup
+Sandbox.Game/Sandbox.ConsoleSystem.get_Caller()
+Sandbox.Game/Sandbox.ConsoleSystem.Run( System.String, System.Object[] )
+Sandbox.Game/Sandbox.Entity
+Sandbox.Game/Sandbox.Entity.get_ActiveChild()
+Sandbox.Game/Sandbox.Entity.get_Children()
+Sandbox.Game/Sandbox.Entity.get_Health()
+Sandbox.Game/Sandbox.Entity.get_Inventory()
+Sandbox.Game/Sandbox.Entity.get_IsClient()
+Sandbox.Game/Sandbox.Entity.get_IsServer()
+Sandbox.Game/Sandbox.Entity.get_IsWorld()
+Sandbox.Game/Sandbox.Entity.get_LifeState()
+Sandbox.Game/Sandbox.Entity.get_PhysicsGroup()
+Sandbox.Game/Sandbox.Entity.get_WorldPos()
+Sandbox.Game/Sandbox.Entity.get_WorldRot()
+Sandbox.Game/Sandbox.Entity.IsActiveChild()
+Sandbox.Game/Sandbox.Entity.OnDestroy()
+Sandbox.Game/Sandbox.Entity.set_ActiveChild( Sandbox.Entity )
+Sandbox.Game/Sandbox.Entity.set_EnableDrawing( System.Boolean )
+Sandbox.Game/Sandbox.Entity.set_EnableHideInFirstPerson( System.Boolean )
+Sandbox.Game/Sandbox.Entity.set_EnableShadowInFirstPerson( System.Boolean )
+Sandbox.Game/Sandbox.Entity.set_Inventory( Sandbox.IBaseInventory )
+Sandbox.Game/Sandbox.Entity.set_MoveType( Sandbox.MoveType )
+Sandbox.Game/Sandbox.Entity.set_WorldPos( Vector3 )
+Sandbox.Game/Sandbox.Entity.set_WorldRot( Rotation )
+Sandbox.Game/Sandbox.Entity.SetParent( Sandbox.Entity, System.Boolean )
+Sandbox.Game/Sandbox.FileSystem.get_Mounted()
+Sandbox.Game/Sandbox.GameBase
+Sandbox.Game/Sandbox.GameBase.get_Current()
+Sandbox.Game/Sandbox.Host.get_IsServer()
+Sandbox.Game/Sandbox.IBaseInventory
+Sandbox.Game/Sandbox.IBaseInventory.Count()
+Sandbox.Game/Sandbox.IBaseInventory.DeleteContents()
+Sandbox.Game/Sandbox.IBaseInventory.DropActive()
+Sandbox.Game/Sandbox.IBaseInventory.GetActiveSlot()
+Sandbox.Game/Sandbox.IBaseInventory.GetSlot( System.Int32 )
+Sandbox.Game/Sandbox.IBaseInventory.SetActiveSlot( System.Int32, System.Boolean )
+Sandbox.Game/Sandbox.InputButton
+Sandbox.Game/Sandbox.Library.Create<T>( System.String, System.Boolean )
+Sandbox.Game/Sandbox.Library.GetAllAttributes<T>()
+Sandbox.Game/Sandbox.Library.GetAttribute( System.String )
+Sandbox.Game/Sandbox.LibraryClass.get_ClassInfo()
+Sandbox.Game/Sandbox.LifeState
+Sandbox.Game/Sandbox.ModelEntity
+Sandbox.Game/Sandbox.ModelEntity..ctor()
+Sandbox.Game/Sandbox.ModelEntity.get_CollisionBounds()
+Sandbox.Game/Sandbox.ModelEntity.get_PhysicsBody()
+Sandbox.Game/Sandbox.ModelEntity.GetModelName()
+Sandbox.Game/Sandbox.ModelEntity.set_CollisionGroup( Sandbox.CollisionGroup )
+Sandbox.Game/Sandbox.ModelEntity.set_EnableAllCollisions( System.Boolean )
+Sandbox.Game/Sandbox.ModelEntity.set_EnableHitboxes( System.Boolean )
+Sandbox.Game/Sandbox.ModelEntity.set_SurroundingBoundsMode( Sandbox.SurroundingBoundsType )
+Sandbox.Game/Sandbox.ModelEntity.set_UsePhysicsCollision( System.Boolean )
+Sandbox.Game/Sandbox.ModelEntity.SetModel( System.String )
+Sandbox.Game/Sandbox.MoveType
+Sandbox.Game/Sandbox.NetRead
+Sandbox.Game/Sandbox.NetRead.IsGroup( Sandbox.NetVarGroup )
+Sandbox.Game/Sandbox.NetRead.ReadClass<T>( T )
+Sandbox.Game/Sandbox.NetRead.ReadPropertyId()
+Sandbox.Game/Sandbox.NetworkClass.NetworkDirty( System.String, Sandbox.NetVarGroup )
+Sandbox.Game/Sandbox.Networked.OnCallRemoteProcedure( System.Int32, Sandbox.NetRead )
+Sandbox.Game/Sandbox.NetWrite
+Sandbox.Game/Sandbox.NetWrite.IsGroup( Sandbox.NetVarGroup )
+Sandbox.Game/Sandbox.NetWrite.SendRpcToClient( Sandbox.Player, Sandbox.Entity )
+Sandbox.Game/Sandbox.NetWrite.StartRpc( System.Int32, Sandbox.Entity )
+Sandbox.Game/Sandbox.NetWrite.Write<T>( System.Int32, T )
+Sandbox.Game/Sandbox.NullChecks.IsValid( Sandbox.Entity )
+Sandbox.Game/Sandbox.PhysicsBody
+Sandbox.Game/Sandbox.PhysicsBody.FindClosestPoint( Vector3 )
+Sandbox.Game/Sandbox.PhysicsBody.get_Pos()
+Sandbox.Game/Sandbox.PhysicsBody.set_Pos( Vector3 )
+Sandbox.Game/Sandbox.PhysicsGroup
+Sandbox.Game/Sandbox.PhysicsGroup.get_BodyCount()
+Sandbox.Game/Sandbox.Player
+Sandbox.Game/Sandbox.Player.get_EyeAng()
+Sandbox.Game/Sandbox.Player.get_EyePos()
+Sandbox.Game/Sandbox.Player.get_EyeRot()
+Sandbox.Game/Sandbox.Player.get_Input()
+Sandbox.Game/Sandbox.Player.get_Local()
+Sandbox.Game/Sandbox.Player.HasPermission( System.String )
+Sandbox.Game/Sandbox.PlayerAnimator
+Sandbox.Game/Sandbox.PlayerController
+Sandbox.Game/Sandbox.Prediction.get_FirstTime()
+Sandbox.Game/Sandbox.Texture
+Sandbox.Game/Sandbox.Texture.Load( System.String, System.Boolean )
+Sandbox.Game/Sandbox.TimeSince
+Sandbox.Game/Sandbox.TimeSince.op_Implicit( Sandbox.TimeSince )
+Sandbox.Game/Sandbox.TimeSince.op_Implicit( System.Single )
+Sandbox.Game/Sandbox.Trace
+Sandbox.Game/Sandbox.Trace.Ignore( Sandbox.Entity )
+Sandbox.Game/Sandbox.Trace.Ray( Vector3, Vector3 )
+Sandbox.Game/Sandbox.Trace.Run()
+Sandbox.Game/Sandbox.Trace.Size( Vector3 )
+Sandbox.Game/Sandbox.Trace.UseHitboxes( System.Boolean )
+Sandbox.Game/Sandbox.TraceResult
+Sandbox.Game/Sandbox.UI.BaseStyles.Set( System.String, System.String )
+Sandbox.Game/Sandbox.UI.Construct.LabelConstructor.Label( Sandbox.UI.Construct.PanelCreator, System.String, System.String )
+Sandbox.Game/Sandbox.UI.Construct.PanelCreator
+Sandbox.Game/Sandbox.UI.Construct.PanelCreator.Panel( System.String )
+Sandbox.Game/Sandbox.UI.Label
+Sandbox.Game/Sandbox.UI.Label.set_Text( System.String )
+Sandbox.Game/Sandbox.UI.Panel
+Sandbox.Game/Sandbox.UI.Panel..ctor()
+Sandbox.Game/Sandbox.UI.Panel.AddChild<T>( System.String )
+Sandbox.Game/Sandbox.UI.Panel.AddChild<T>( T&, System.String )
+Sandbox.Game/Sandbox.UI.Panel.AddClass( System.String )
+Sandbox.Game/Sandbox.UI.Panel.AddEvent( System.String, System.Action )
+Sandbox.Game/Sandbox.UI.Panel.get_Add()
+Sandbox.Game/Sandbox.UI.Panel.get_Style()
+Sandbox.Game/Sandbox.UI.Panel.set_Parent( Sandbox.UI.Panel )
+Sandbox.Game/Sandbox.UI.Panel.SetClass( System.String, System.Boolean )
+Sandbox.Game/Sandbox.UI.Panel.Tick()
+Sandbox.Game/Sandbox.UI.PanelBackground
+Sandbox.Game/Sandbox.UI.PanelStyle
+Sandbox.Game/Sandbox.UI.RootPanel
+Sandbox.Game/Sandbox.UI.StyleSheetCollection
+Sandbox.Game/Sandbox.UI.StyleSheetCollection.Load( System.String )
+Sandbox.Game/Sandbox.UserInput
+Sandbox.Game/Sandbox.UserInput.Down( Sandbox.InputButton )
+Sandbox.Game/Sandbox.UserInput.get_ActiveChild()
+Sandbox.Game/Sandbox.UserInput.get_Forward()
+Sandbox.Game/Sandbox.UserInput.get_Left()
+Sandbox.Game/Sandbox.UserInput.Pressed( Sandbox.InputButton )
+Sandbox.Game/Sandbox.UserInput.Released( Sandbox.InputButton )
+Sandbox.System/Angles
+Sandbox.System/Angles..ctor( System.Single, System.Single, System.Single )
+Sandbox.System/BBox
+Sandbox.System/BBox.get_Size()
+Sandbox.System/Rotation
+Sandbox.System/Rotation.From( Angles )
+Sandbox.System/Rotation.FromAxis( Vector3, System.Single )
+Sandbox.System/Rotation.get_Forward()
+Sandbox.System/Rotation.LookAt( Vector3, Vector3 )
+Sandbox.System/Rotation.op_Multiply( Rotation, Rotation )
+Sandbox.System/Rotation.op_Multiply( Rotation, Vector3 )
+Sandbox.System/Sandbox.ConsoleResult
+Sandbox.System/Sandbox.LibraryAttribute
+Sandbox.System/Sandbox.LibraryAttribute.get_Name()
+Sandbox.System/Sandbox.LibraryAttribute.get_Spawnable()
+Sandbox.System/Sandbox.LibraryAttribute.get_Title()
+Sandbox.System/Sandbox.LibraryAttribute.IsNamed( System.String )
+Sandbox.System/Sandbox.NetVarGroup
+Sandbox.System/Vector2
+Sandbox.System/Vector2..ctor( System.Single, System.Single )
+Sandbox.System/Vector3
+Sandbox.System/Vector3.op_Addition( Vector3, Vector3 )
+Sandbox.System/Vector3.op_Implicit( System.Single )
+Sandbox.System/Vector3.op_Multiply( Vector3, System.Single )
+Sandbox.System/Vector3.op_Multiply( Vector3, Vector3 )
+Sandbox.System/Vector3.op_Subtraction( Vector3, Vector3 )
+System.Linq/System.Linq.Enumerable.OrderBy<TSource,TKey>( System.Collections.Generic.IEnumerable`1<TSource>, System.Func`2<TSource,TKey> )
+System.Linq/System.Linq.Enumerable.ToArray<TSource>( System.Collections.Generic.IEnumerable`1<TSource> )
+System.Linq/System.Linq.Enumerable.Where<TSource>( System.Collections.Generic.IEnumerable`1<TSource>, System.Func`2<TSource,System.Boolean> )
+System.Linq/System.Linq.IOrderedEnumerable`1
+System.Private.CoreLib/System.Action
+System.Private.CoreLib/System.Action..ctor( System.Object, System.IntPtr )
+System.Private.CoreLib/System.Action`2
+System.Private.CoreLib/System.Action`2..ctor( System.Object, System.IntPtr )
+System.Private.CoreLib/System.Boolean
+System.Private.CoreLib/System.Collections.Generic.IEnumerable`1
+System.Private.CoreLib/System.Collections.Generic.IEnumerable`1.GetEnumerator()
+System.Private.CoreLib/System.Collections.Generic.IEnumerator`1
+System.Private.CoreLib/System.Collections.Generic.IEnumerator`1.get_Current()
+System.Private.CoreLib/System.Collections.Generic.IReadOnlyList`1
+System.Private.CoreLib/System.Collections.Generic.List`1
+System.Private.CoreLib/System.Collections.Generic.List`1..ctor()
+System.Private.CoreLib/System.Collections.Generic.List`1.Add( T )
+System.Private.CoreLib/System.Collections.Generic.List`1.get_Count()
+System.Private.CoreLib/System.Collections.Generic.List`1.get_Item( System.Int32 )
+System.Private.CoreLib/System.Collections.IEnumerator.MoveNext()
+System.Private.CoreLib/System.Exception..ctor( System.String )
+System.Private.CoreLib/System.Func`2
+System.Private.CoreLib/System.Func`2..ctor( System.Object, System.IntPtr )
+System.Private.CoreLib/System.IDisposable.Dispose()
+System.Private.CoreLib/System.Int32
+System.Private.CoreLib/System.IntPtr
+System.Private.CoreLib/System.Nullable`1
+System.Private.CoreLib/System.Nullable`1..ctor( T )
+System.Private.CoreLib/System.Object
+System.Private.CoreLib/System.Object..ctor()
+System.Private.CoreLib/System.Object.ToString()
+System.Private.CoreLib/System.Single
+System.Private.CoreLib/System.String
+System.Private.CoreLib/System.String.Concat( System.String, System.String )
+System.Private.CoreLib/System.String.Concat( System.String, System.String, System.String )
+System.Private.CoreLib/System.String.Contains( System.String )
+System.Private.CoreLib/System.String.Format( System.String, System.Object )
+System.Private.CoreLib/System.String.op_Equality( System.String, System.String )
+System.Private.CoreLib/System.Void
