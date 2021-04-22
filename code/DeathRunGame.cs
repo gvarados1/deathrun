@@ -20,7 +20,7 @@ partial class SandboxGame : Game
 
 	public override Player CreatePlayer()
 	{
-		return new SandboxPlayer();
+		return new DeathRunPlayer();
 	}
 
 	protected override void OnDestroy()

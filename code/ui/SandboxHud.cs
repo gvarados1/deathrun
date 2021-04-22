@@ -18,6 +18,6 @@ public partial class SandboxHud : Hud
 		RootPanel.AddChild<KillFeed>();
 		RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
 		RootPanel.AddChild<Health>();
-		RootPanel.AddChild<InventoryBar>();
+
 	}
 }

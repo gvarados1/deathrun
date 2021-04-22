@@ -1,8 +1,10 @@
 ﻿using Sandbox;
 using System;
 using System.Linq;
+using System.Numerics;
+using System.Threading;
 
-partial class SandboxPlayer : BasePlayer
+partial class DeathRunPlayer : BasePlayer
 {
 	TimeSince timeSinceDropped;
 
@@ -15,10 +17,6 @@ partial class SandboxPlayer : BasePlayer
 	[Net]
 	public PlayerAnimator VehicleAnimator { get; set; }
 
-	public SandboxPlayer()
-	{
-		Inventory = new BaseInventory( this );
-	}
 
 	public override void Respawn()
 	{
@@ -33,20 +31,14 @@ partial class SandboxPlayer : BasePlayer
 		EnableHideInFirstPerson = true;
 		EnableShadowInFirstPerson = true;
 
+		Dress();
+
 		base.Respawn();
 	}
 
 	public override void OnKilled()
 	{
 		base.OnKilled();
-
-		//
-		Inventory.DropActive();
-
-		//
-		// Delete any items we didn't drop
-		//
-		Inventory.DeleteContents();
 
 		BecomeRagdollOnClient();
 
@@ -133,11 +125,7 @@ partial class SandboxPlayer : BasePlayer
 
 		if ( Input.Pressed( InputButton.Drop ) )
 		{
-			var dropped = Inventory.DropActive();
-			if ( dropped != null )
-			{
-				timeSinceDropped = 0;
-			}
+			// do nothing since no inventory
 		}
 
 		if ( Input.Released( InputButton.Jump ) )
@@ -149,6 +137,12 @@ partial class SandboxPlayer : BasePlayer
 
 			timeSinceJumpReleased = 0;
 		}
+
+		if (Input.Pressed(InputButton.Menu))
+        {
+			// switch third person camera side
+			//Dress();
+        }
 
 		if ( Input.Left != 0 || Input.Forward != 0 )
 		{
@@ -200,31 +194,6 @@ partial class SandboxPlayer : BasePlayer
 		if ( timeSinceDropped < 1 ) return;
 
 		base.StartTouch( other );
-	}
-
-	[ServerCmd( "inventory_current" )]
-	public static void SetInventoryCurrent( string entName )
-	{
-		var target = ConsoleSystem.Caller;
-		if ( target == null ) return;
-
-		var inventory = target.Inventory;
-		if ( inventory == null )
-			return;
-
-		for ( int i = 0; i < inventory.Count(); ++i )
-		{
-			var slot = inventory.GetSlot( i );
-			if ( !slot.IsValid() )
-				continue;
-
-			if ( !slot.ClassInfo.IsNamed( entName ) )
-				continue;
-
-			inventory.SetActiveSlot( i, false );
-
-			break;
-		}
 	}
 
 	public override bool HasPermission( string mode )
