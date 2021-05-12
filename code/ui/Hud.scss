@@ -1,0 +1,229 @@
+﻿rootpanel
+{
+	background-color: rgba( #333, 0 );
+	transition: background-color 0.2s ease-in;
+	transform-origin: 50% 50%;
+
+	&.devcamera
+	{
+		display: none;
+	}
+}
+
+chatbox
+{
+	bottom: 350px;
+}
+
+vitals {
+	align-items: center;
+	background-image: url( /ui/hidden/player-container.png );
+	background-size: 100%;
+	color: #fff;
+	padding-left: 20px;
+	padding-right: 24px;
+	font-family: Roboto;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	bottom: 32px;
+	left: 64px;
+	font-size: 40px;
+	height: 80px;
+	width: 280px;
+
+	label {
+		text-shadow: 0px 0px 20px #000;
+
+		&.danger {
+			color: #f00;
+			text-shadow: 0px 0px 10px #f005;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+.team_hidden {
+	vitals {
+		background-image: url( /ui/hidden/player-container.png );
+	}
+}
+
+ammo {
+	background-image: url( /ui/hidden/ammo-menu.png );
+	background-size: 100%;
+	bottom: 32px;
+	display: none;
+	align-items: center;
+	font-family: Lexend;
+	height: 80px;
+	padding-left: 40px;
+	padding-right: 60px;
+	position: absolute;
+	right: 64px;
+	width: 248px;
+
+	label {
+		text-shadow: 0px 0px 20px #000;
+	}
+
+	.icon {
+		width: 32px;
+		height: 32px;
+		background-image: url( /ui/hidden/ammo-icon.png );
+		background-size: 100%;
+		position: absolute;
+		right: 36px;
+	}
+
+	.textContainer {
+		align-items: center;
+		flex-grow: 1;
+	}
+
+	.weapon {
+		font-size: 34px;
+		color: #ECECEC;
+		min-width: 50px;
+		text-align: right;
+		transition: color 0.2s ease;
+	}
+
+	.inventory {
+		color: #ECECEC;
+		font-size: 28px;
+		margin-left: 8px;
+		opacity: 0.5;
+	}
+
+	&.active {
+		display: flex;
+	}
+
+
+	&.low-ammo {
+		.weapon {
+			color: #ff9f9f;
+		}
+	}
+}
+
+.team_hidden
+{
+	ammo
+	{
+		background-image: url( /ui/grayscale/ammo-gs.png );
+
+		.inventory
+		{
+			color: #79612C;
+		}
+	}
+}
+
+.abilities {
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	right: 0;
+
+	.ability {
+		align-items: center;
+		background-image: url( /ui/hidden/power-unavailable.png );
+		box-shadow: 0 2px 40px rgba(0,0,0,0.3);
+		background-size: 100%;
+		height: 90px;
+		justify-content: center;
+		margin-left: 24px;
+		opacity: 0.7;
+		transition: all 0.5s ease;
+		width: 90px;
+
+		.icon {
+			background-size: 100%;
+			width: 80px;
+			height: 80px;
+
+			&.sense {
+				background-image: url( /ui/hidden/eye-available.png );
+			}
+
+			&.scream {
+				background-image: url( /ui/hidden/power2-available.png );
+			}
+		}
+
+		.cooldown-bar {
+			width: 90px;
+			height: 4px;
+			background-color: red;
+			position: absolute;
+			bottom: 0;
+			opacity: 1;
+
+			&.usable {
+				opacity: 0;
+			}
+		}
+
+		.cooldown {
+			position: absolute;
+			background-image: url( /ui/hidden/power-unavailable.png );
+			box-shadow: 0 2px 25px rgba(0,0,0,0.9);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-size: cover;
+			font-family: Lexend;
+			border-radius: 4px;
+			bottom: 0;
+			transform: translateY(50%);
+			height: 18px;
+			width: 18px;
+
+			.text {
+				font-size: 12px;
+				color: white;
+				text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+			}
+
+			&.usable {
+				background-image: url( /ui/hidden/power-available.png );
+			}
+		}
+
+		&.usable {
+			background-image: url( /ui/hidden/power-available.png );
+			box-shadow: 0 2px 40px rgba(0,0,0,0.9);
+			opacity: 1;
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+.hdn_pistol .icon
+{
+	background-image: url( /ui/weapons/dm_pistol.png );
+}
+
+.hdn_shotgun .icon
+{
+	background-image: url( /ui/weapons/dm_shotgun.png );
+}
+
+.hdn_smg .icon
+{
+	background-image: url( /ui/weapons/dm_smg.png );
+}

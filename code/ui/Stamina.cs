@@ -2,19 +2,20 @@
 using Sandbox;
 using Sandbox.UI;
 using Sandbox.UI.Construct;
+using System;
 
 namespace HiddenGamemode
 {
-	public class Health : Panel
+	public class Stamina : Panel
 	{
 		public Panel InnerBar;
 		public Panel OuterBar;
 		public Panel Icon;
 		public Label Text;
 
-		public Health()
+		public Stamina()
 		{
-			StyleSheet.Load( "/ui/Health.scss" );
+			StyleSheet.Load( "/ui/Stamina.scss" );
 
 			Icon = Add.Panel( "icon" );
 			OuterBar = Add.Panel( "outerBar" );
@@ -27,13 +28,12 @@ namespace HiddenGamemode
 			if ( Sandbox.Player.Local is not Player player ) return;
 
 			SetClass( "hidden", player.LifeState != LifeState.Alive );
-			SetClass("low-health", player.Health < 30);
+			SetClass("low-stamina", player.Stamina < 30);
 
-			InnerBar.Style.Width = Length.Percent( player.Health );
+			InnerBar.Style.Width = Length.Percent( player.Stamina );
 			InnerBar.Style.Dirty();
-			
 
-			Text.Text = player.Health.ToString();
+			Text.Text = ((int)player.Stamina).ToString();
 		}
 	}
 }
